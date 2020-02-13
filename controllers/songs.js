@@ -13,7 +13,9 @@ router.get('/', (req, res) => {
 //update one song
 router.put('/:id', (req, res) => {
     console.log(req.body);
-    Song.findByIdAndUpdate(req.params.id, req.body).then(() => {
+    Song.findByIdAndUpdate({ _id: req.params.id }, req.body, {
+        new: true
+    }).then(() => {
         Song.find({}).then(songs => {
             res.json(songs);
         });
