@@ -1,11 +1,11 @@
 const express = require('express');
-const Jukebox = require('../models/Jukebox');
+const Song = require('../models/Song');
 
 const router = express.Router();
 
 //return all songs
 router.get('/', (req, res) => {
-    Jukebox.find({}).then(songs => {
+    Song.find({}).then(songs => {
         res.json(songs);
     });
 });
@@ -13,8 +13,8 @@ router.get('/', (req, res) => {
 //update one song
 router.put('/:id', (req, res) => {
     console.log(req.body);
-    Jukebox.findByIdAndUpdate(req.params.id, req.body).then(() => {
-        Jukebox.find({}).then(songs => {
+    Song.findByIdAndUpdate(req.params.id, req.body).then(() => {
+        Song.find({}).then(songs => {
             res.json(songs);
         });
     });
@@ -22,8 +22,8 @@ router.put('/:id', (req, res) => {
 
 //add one sog
 router.post('/', (req, res) => {
-    Jukebox.create(req.body).then(() => {
-        Jukebox.find({}).then(songs => {
+    Song.create(req.body).then(() => {
+        Song.find({}).then(songs => {
             res.json(songs);
         });
     });
@@ -31,8 +31,8 @@ router.post('/', (req, res) => {
 
 //delete one gif
 router.delete('/:id', (req, res) => {
-    Jukebox.findOneAndRemove({ _id: req.params.id }).then(() => {
-        Jukebox.find({}).then(songs => {
+    Song.findOneAndRemove({ _id: req.params.id }).then(() => {
+        Song.find({}).then(songs => {
             res.json(songs);
         });
     });

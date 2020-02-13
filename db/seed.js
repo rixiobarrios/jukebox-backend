@@ -1,11 +1,10 @@
 const mongoose = require('./connection');
 const songs = require('./seeds.json');
-const Jukebox = require('../models/Jukebox');
-Jukebox.deleteMany({})
+const Song = require('../models/Song');
+Song.deleteMany({})
     .then(() => {
-        Jukebox.insertMany(songs);
+        Song.collection.insert(songs);
     })
-    .catch(err => console.error(err))
     .then(() => {
         console.log('We seeded data!!');
         process.exit();

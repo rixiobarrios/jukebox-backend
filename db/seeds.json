@@ -1,30 +1,25 @@
 [
     {
-        "id": 1,
         "artist": "Dimmu Borgir",
         "name": "Progenies Of The Great Apocalypse",
         "url": "https://www.youtube.com/watch?v=NiNTrKsQ8TU"
     },
     {
-        "id": 2,
         "artist": "Moonspell",
         "name": "Night Eternal",
         "url": "https://www.youtube.com/watch?v=XGwWH7eqpwA"
     },
     {
-        "id": 3,
+        "artist": "Behemonth",
+        "name": "O Father O Satan O Sun",
+        "url": "https://www.youtube.com/watch?v=05hAQWiX4F4"
+    },
+    {
         "artist": "Arch Enemy",
         "name": "The Eagle Flies Alone",
         "url": "https://www.youtube.com/watch?v=mjF1rmSV1dM"
     },
     {
-        "id": 4,
-        "artist": "Arch Enemy",
-        "name": "The Eagle Flies Alone",
-        "url": "https://www.youtube.com/watch?v=mjF1rmSV1dM"
-    },
-    {
-        "id": 5,
         "artist": "As Blood Runs Black",
         "name": "The Brighter Side Of Suffering",
         "url": "https://www.youtube.com/watch?v=hsd6S2GKL60"
